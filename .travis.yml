@@ -14,5 +14,5 @@ addons:
 install:
 - "[ $CXX = g++ ] && export CXX=g++-7 || true"
 script:
-  - make docker-login
-  - make push-image
+  - make
+
