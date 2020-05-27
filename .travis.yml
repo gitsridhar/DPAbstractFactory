@@ -1,5 +1,6 @@
 os: linux
 arch: x86_64
+dist: bionic
 sudo: false
 language: cpp
 compiler:
@@ -8,11 +9,9 @@ addons:
   apt:
     sources:
     - ubuntu-toolchain-r-test
-    - llvm-toolchain-precise-3.8
     packages:
     - g++-7
 install:
 - "[ $CXX = g++ ] && export CXX=g++-7 || true"
 script:
   - make
-
