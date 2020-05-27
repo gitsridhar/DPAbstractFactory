@@ -1,0 +1,18 @@
+os: linux
+arch: x86_64
+sudo: false
+language: cpp
+compiler:
+  - g++
+addons:
+  apt:
+    sources:
+    - ubuntu-toolchain-r-test
+    - llvm-toolchain-precise-3.8
+    packages:
+    - g++-7
+install:
+- "[ $CXX = g++ ] && export CXX=g++-7 || true"
+script:
+  - make docker-login
+  - make push-image
