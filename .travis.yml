@@ -15,4 +15,5 @@ install:
 - "[ $CXX = g++ ] && export CXX=g++-7 || true"
 script:
   - make
+  - ls -la
   - ./abstractfactory
